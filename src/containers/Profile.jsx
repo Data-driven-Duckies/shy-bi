@@ -136,16 +136,14 @@ class Profile extends Component {
             subtitle={`Get to know ${this.props.profile.name}!`}
             subtitleStyle={cardStyle.subtitle}
           />
-          <div>
-            {this.renderProfile()}
-            <Checkbox
-              onClick={this.handleLikeButton}
-              checkedIcon={<ActionFavorite />}
-              uncheckedIcon={<ActionFavoriteBorder />}
-              label="Like"
-              style={styles.checkbox}
-            />
-          </div>
+          {this.renderProfile()}
+          <Checkbox
+            onClick={this.handleLikeButton}
+            checkedIcon={<ActionFavorite />}
+            uncheckedIcon={<ActionFavoriteBorder />}
+            label="Like"
+            style={styles.checkbox}
+          />
           <Snackbar
             open={this.props.open || false}
             message="You guys are a match!"
