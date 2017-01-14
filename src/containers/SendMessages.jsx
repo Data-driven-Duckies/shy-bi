@@ -90,22 +90,24 @@ class SendMessages extends Component {
 
     const { handleSubmit, valid, pristine, submitting } = this.props;
     return (
-      <Card className="container">
-        <form onSubmit={handleSubmit(this.onSubmit)}>
-          <h2 style={style} className="card-heading">Send Message</h2>
-          <div className="field-line">
-            <Field name="sendTo" type="text" component={renderSelectField} label="Send To" />
-          </div>
-          <div className="field-line">
-            <Field name="title" type="text" component={this.renderTextField} label="Title" />
-          </div>
-          <div className="field-line">
-            <Field name="message" type="text" component={this.renderTextField} label="Message" />
-          </div>
-          <div className="button-line">
-            <RaisedButton style={style} type="submit" label="Send" disabled={pristine || !valid || submitting} primary />
-          </div>
-        </form>
+      <Card className="container" style={{ paddingBottom: '300px' }}>
+        <div style={{ margin: '0 auto', padding: '50px 0', width: '300px' }}>
+          <form onSubmit={handleSubmit(this.onSubmit)}>
+            <h2 style={style} className="card-heading">Send Message</h2>
+            <div className="field-line">
+              <Field name="sendTo" type="text" component={renderSelectField} label="Send To" />
+            </div>
+            <div className="field-line">
+              <Field name="title" type="text" component={this.renderTextField} label="Title" />
+            </div>
+            <div className="field-line">
+              <Field name="message" type="text" component={this.renderTextField} label="Message" />
+            </div>
+            <div className="button-line">
+              <RaisedButton style={style} type="submit" label="Send" disabled={pristine || !valid || submitting} primary />
+            </div>
+          </form>
+        </div>
       </Card>
     );
   }

@@ -32,15 +32,17 @@ class RecommendedUsers extends Component {
 
   render() {
     return (
-      <Card>
-        <CardHeader
-          title="Recommended for You"
-          titleStyle={styles.title}
-          subtitle="Based on our special algorithm"
-          subtitleStyle={styles.subtitle}
-        />
+      <div>
+        <Card style={{ position: 'fixed', width: '100%' }}>
+          <CardHeader
+            title="Recommended for You"
+            titleStyle={styles.title}
+            subtitle="Based on our special algorithm"
+            subtitleStyle={styles.subtitle}
+          />
+        </Card>
         <RecommendedUserList recommended={this.props.recommended} handleClick={this.handleClick} />
-      </Card>
+      </div>
     );
   }
 }
