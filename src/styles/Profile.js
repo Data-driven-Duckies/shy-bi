@@ -9,7 +9,7 @@ const styles = {
     fontFamily: 'Maria',
     fontSize: '20px',
     marginLeft: '50px',
-    paddingBottom: '155px',
+    paddingBottom: '182px',
   },
   card: {
     margin: '100px;',
