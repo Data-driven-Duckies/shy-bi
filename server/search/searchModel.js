@@ -34,7 +34,7 @@ module.exports = {
         MATCH (user)-[]->(city:City)
         MATCH (user)-[]->(age:Age)
         MATCH (user)-[]->(sex:Sex)
-        RETURN age, user, city, sex LIMIT 10`)
+        RETURN age, user, city, sex LIMIT 100`)
       .then(({ records }) => {
         db.close();
         console.log('3) [searchModel.js/getAll] Reteriving first 10 user data');
@@ -79,7 +79,7 @@ module.exports = {
           WHERE city.name =~ {city}
         MATCH (user)-[:MEMBER_OF]->(sex: Sex)
           WHERE sex.sex =~ {sex}
-        RETURN user, age, city, sex LIMIT 10`,
+        RETURN user, age, city, sex LIMIT 100`,
         { minage, maxage, city, sex })
       .then(({ records }) => {
         db.close();

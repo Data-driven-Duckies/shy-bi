@@ -26,8 +26,7 @@ const Message = ({ message, handleExpand, expanded }) => {
         showExpandableButton
       />
       <CardText style={style}>
-        { !read && <p>Unread</p>}
-        <p>{`${body.slice(0, 20)}...`}</p>
+        <p>{ !read && <i className="fa fa-circle" style={{ color: '#81C784' }} aria-hidden="true" />} {`  ${body.slice(0, 20)}...`}</p>
       </CardText>
       <CardTitle style={style} title={title} expandable />
       <CardText style={style} expandable>
